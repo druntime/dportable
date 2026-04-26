@@ -1,3 +1,5 @@
+#![warn(missing_docs)]
+
 //! Portable interface for various utilities.
 //!
 //! Intended targets are:
@@ -15,6 +17,8 @@
 //!    macro to configure tests to run in browser.
 //!  - [create_non_sync_send_variant_for_wasm] utility macro for creating
 //!    non-[Send] and non-[Sync] variants of traits for use in WASM.
+//!  - [AsyncValue](value::AsyncValue) and [Notifier](value::Notifier) for asynchronous value sharing and notification.
+//!  - [CancellationToken] for cooperative cancellation of asynchronous tasks.
 //!  - [random] function.
 
 pub mod test;
@@ -25,6 +29,9 @@ mod lock;
 pub use lock::*;
 
 pub mod value;
+
+mod cancellation_token;
+pub use cancellation_token::*;
 
 #[cfg(not(target_arch = "wasm32"))]
 pub use tokio::{
