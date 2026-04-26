@@ -1,6 +1,6 @@
 [package]
 name = "dportable"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2021"
 authors = ["zduny <dzduniak@gmail.com>"]
 description = "Portable interface for various utilities."
@@ -10,13 +10,14 @@ documentation = "https://docs.rs/dportable/"
 readme = "../README.md"
 
 [dependencies]
-dportable-macros = "0.1.0"
+dportable-macros = "0.1.2"
 futures = "0.3"
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 tokio = { version = "1", features = ["rt", "time", "macros"] }
+tokio-util = "0.7"
 parking_lot = "0.12"
-rand = "0.9"
+rand = "0.10"
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
 js-sys = "0.3"
