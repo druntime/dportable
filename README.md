@@ -24,4 +24,6 @@ Following features are provided:
     macro to configure tests to run in browser.
  - `create_non_sync_send_variant_for_wasm` utility macro for creating
     non-`Send` and non-`Sync` variants of traits for use in WASM.
+ - `AsyncValue` and `Notifier` for asynchronous value sharing and notification.
+ - `CancellationToken` for cooperative cancellation of asynchronous tasks.
  - `random` function.
