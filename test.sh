@@ -6,5 +6,5 @@ cargo test
 
 # wasm tests
 cd dportable
-wasm-pack test --chrome --headless
+wasm-pack test --firefox --headless
 cd ..

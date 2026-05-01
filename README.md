@@ -18,6 +18,7 @@ Intended targets are:
 Following features are provided:
  - `Mutex` and `RwLock` (using [parking_lot](https://docs.rs/parking_lot/latest/parking_lot/) on native platforms and `std::cell::RefCell` in WASM).  
  - asynchronous `spawn` (not requiring `Send` in WASM) and `sleep`,
+ - `yield_now` function,
  - `Timeout` future,
  - `dtest` attribute macro to create tests for both
     native and WASM targets, also `dtest_configure`

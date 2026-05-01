@@ -1,6 +1,6 @@
 [package]
 name = "dportable"
-version = "0.1.4"
+version = "0.1.5"
 edition = "2021"
 authors = ["zduny <dzduniak@gmail.com>"]
 description = "Portable interface for various utilities."
